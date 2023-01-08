@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
         String user = ed1.getText().toString();
         EditText ed2 = (EditText) findViewById(R.id.pswd);
         String pswd = ed2.getText().toString();
-        if(!user.equals("David")){
+        if(!user.equals("Anna")){
             Toast t = Toast.makeText(getApplicationContext(),"Invalid Username",Toast.LENGTH_LONG);
             t.show();
         }
