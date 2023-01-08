@@ -1,0 +1,20 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="example.javatpoint.com.optionmenu.MainActivity">
+
+    <item  android:id="@+id/i1"
+        android:title="Address"/>
+    <item  android:id="@+id/si1"
+        android:title="Contact Us">
+        <menu>
+            <item
+                android:id="@+id/si2"
+                android:title="Email" />
+
+            <item
+                android:id="@+id/si3"
+                android:title="Phone" />
+        </menu>
+    </item>
+</menu>

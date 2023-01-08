@@ -11,23 +11,25 @@ public class MainActivity extends AppCompatActivity {
     String Address;
     String Phone;
     String Email;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
     }
     public void onSubmit(View view){
-        EditText name = (EditText) findViewById(R.id.name);
-        EditText add = (EditText) findViewById(R.id.add);
-        EditText phone = (EditText) findViewById(R.id.phone);
-        EditText email = (EditText) findViewById(R.id.email);
         Intent i = new Intent(getApplicationContext(), MainActivity2.class);
-        Name= name.getText().toString();
+        EditText name =  findViewById(R.id.name);
+        EditText add =  findViewById(R.id.add);
+        EditText phone =  findViewById(R.id.phone);
+        EditText email =  findViewById(R.id.email);
+
+        Name=  name.getText().toString();
         Address = add.getText().toString();
         Phone = phone.getText().toString();
         Email = email.getText().toString();
-        SharedPreferences sharedPreferences = getSharedPreferences("MySharedPref",MODE_PRIVATE);
-        SharedPreferences.Editor myEdit = sharedPreferences.edit();
+        SharedPreferences pref = getSharedPreferences("MySharedPref",MODE_PRIVATE);
+        SharedPreferences.Editor myEdit = pref.edit();
         myEdit.putString("name", name.getText().toString());
         myEdit.putString("add", add.getText().toString());
         myEdit.putString("phone", phone.getText().toString());
@@ -39,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         i.putExtra("Email",Email);
         startActivity(i);
     }
+
     @Override
     protected void onResume() {
         super.onResume();
@@ -46,11 +49,11 @@ public class MainActivity extends AppCompatActivity {
         EditText add = (EditText) findViewById(R.id.add);
         EditText phone = (EditText) findViewById(R.id.phone);
         EditText email = (EditText) findViewById(R.id.email);
-        SharedPreferences sh =
-                getSharedPreferences("MySharedPref", MODE_PRIVATE);
+        SharedPreferences sh = getSharedPreferences("MySharedPref", MODE_PRIVATE);
         name.setText(sh.getString("name",""));
         add.setText(sh.getString("add",""));
         phone.setText(sh.getString("phone",""));
         email.setText(sh.getString("email",""));
+
     }
 }

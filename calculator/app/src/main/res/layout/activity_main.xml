@@ -4,7 +4,6 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#D3C54D"
     android:textAlignment="center"
     tools:context=".MainActivity">
 
@@ -45,7 +44,7 @@
         android:layout_height="32dp"
         android:textAlignment="textEnd"
         android:textAllCaps="true"
-        android:textSize="20sp"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.637"
